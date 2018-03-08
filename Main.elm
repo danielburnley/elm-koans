@@ -91,6 +91,7 @@ view model =
             ]
         ]
         [ viewHeader (floatLength model.upcoming) (floatLength model.seen)
+        , span [] [text "elm reactor does not hot reload"]
         , viewRunner model.final model.seen
         ]
 
