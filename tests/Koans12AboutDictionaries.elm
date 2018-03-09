@@ -10,35 +10,35 @@ testSuite =
     describe "About Dictionaries" <|
         [ test "dictionaries can be empty" <|
             \() ->
-                x____replace me____x
+               (0)
                     |> Expect.equal (Dict.size Dict.empty)
         , test "or initialized with a single key-value pair" <|
             \() ->
-                x____replace me____x
+                1
                     |> Expect.equal (Dict.size <| Dict.singleton 1 "a")
         , test "or from a list of key-value pairs" <|
             \() ->
-                x____replace me____x
+                2
                     |> Expect.equal (Dict.size <| Dict.fromList [ ( 1, "a" ), ( 2, "b" ) ])
         , test "they can also be converted back to a list" <|
             \() ->
-                x____replace me____x
+                [( 1, "a" ), ( 2, "b" ) ]
                     |> Expect.equal (Dict.toList <| Dict.fromList [ ( 1, "a" ), ( 2, "b" ) ])
         , test "checking for an empty dictionary is easy" <|
             \() ->
-                x____replace me____x
+                True
                     |> Expect.equal (Dict.isEmpty Dict.empty)
         , test "you can also check if a key is present in the dictionary" <|
             \() ->
-                x____replace me____x
+                True
                     |> Expect.equal (Dict.member 1 <| Dict.singleton 1 "a")
         , test "or get the value associated with the key" <|
             \() ->
-                Just (x____replace me____x)
+                Just ("a")
                     |> Expect.equal (Dict.get 1 <| Dict.singleton 1 "a")
         , test "a key-value pair can be added to the dictionary" <|
             \() ->
-                Just (x____replace me____x)
+                Just ("b")
                     |> Expect.equal (Dict.get 2 <| Dict.insert 2 "b" <| Dict.singleton 1 "a")
         , test "inserting can also overwrite the value associated with a key" <|
             \() ->
